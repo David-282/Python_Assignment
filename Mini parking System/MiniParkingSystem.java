@@ -21,12 +21,7 @@ public class MiniParkingSystem{
                switch (option){
 
                case 1->{parkCar(parkingLot);
-//                         for(int count =0;count<parkingLot.length;count++){
-//                                    if (parkingLot[count]==1){
-//                                 lots+=1;
-//                                  
-//}
-//}                    
+                
                          if (lots==20){
                                System.out.println("The parking spaces are filled up, check back later");
                          condition=false;
@@ -38,10 +33,7 @@ public class MiniParkingSystem{
                          int carLot= input.nextInt();
                          removeCar(carLot,parkingLot);
                          System.out.print(Arrays.toString(parkingLot));
-//                              if (parkingLot[20]==1){
-//                              System.out.print("All the parking spaces are filled up");
-//                                   break;
-//}                    
+                 
 }
                case 0-> {condition=false;
                          System.out.println("Thank you for choosing us");}
@@ -66,12 +58,7 @@ public static void  parkCar (int [] parkingLot){
 }
 
 public static void  removeCar (int carLot, int [] parkingLot){
-//          
-//          if (parkingLot[carLot-1]==0){
-//                    System.out.println("Your are not parked there");
-//           
-//}     
-//   else 
+
           if (carLot <1 ||carLot >parkingLot.length){
           System.out.println(" INVALID !!! Enter parking lot space between 1 and 20");
                return;
