@@ -2,10 +2,7 @@
 parking_lot = []
 for count in range (0,20):
      parking_lot.append(0)
-print(parking_lot)
 
-#parking_lot = [1,1,1,1,1,1,0]
-#print(parking_lot)
 def  parkCar (parking_lot):
              
      for count in range (0,len(parking_lot)):
@@ -15,10 +12,6 @@ def  parkCar (parking_lot):
                print("You are parked at car lot number " ,(count + 1))
 #               lots+=1
                break
-#     for index in parking_lot:
-#          if index==1:
-#               print("Car park full, check back later")
-#               return
 
 def removeCar (car_lot, parkingLot):
 
@@ -54,13 +47,25 @@ while(condition):
                if 0 not in parking_lot:
                     print("The parking spaces are filled up, check back later")
                     condition = False
-               print(parking_lot)
+#               print(parking_lot)
+               for count in range (0,len(parking_lot)):
+                    if parking_lot[count] ==0:
+                         print(f"Car Lot {count+1} is empty")                    
+                    else:
+                         print(f"Car Lot  {count+1} is occupied ")
+                         
 
           case 2 :    
                print()
                car_lot=(int(input("what car lot did you park at: ")))
                removeCar(car_lot,parking_lot)
-               print(parking_lot)
+#               print(parking_lot)
+               for count in range (0,len(parking_lot)):
+                    if parking_lot[count]  ==0:
+                         print(f"Car Lot {count+1} is empty")                    
+                    else:
+                         print(f"Car Lot  {count+1} is occupied ")
+                         
 
           case 0: 
                condition=False

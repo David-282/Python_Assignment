@@ -26,13 +26,26 @@ public class MiniParkingSystem{
                                System.out.println("The parking spaces are filled up, check back later");
                          condition=false;
                                                  }
-                         System.out.print(Arrays.toString(parkingLot));}
-
+//                         System.out.print(Arrays.toString(parkingLot));}
+                    for(int count =0; count<parkingLot.length;count++){
+                         if (parkingLot[count]==0){
+                         System.out.printf("Car Lot %d is free%n",(count+1));}
+                         else{
+                         System.out.printf("Car Lot %d is Ocupied%n",(count+1));}
+}
+}
                case 2 -> {     System.out.println();
                          System.out.print("what car lot did you park at: ");
                          int carLot= input.nextInt();
                          removeCar(carLot,parkingLot);
-                         System.out.print(Arrays.toString(parkingLot));
+                         
+                         for(int count =0; count<parkingLot.length;count++){
+                         if (parkingLot[count]==0){
+                         System.out.printf("Car Lot %d is free%n",(count+1));}
+                         else{
+                         System.out.printf("Car Lot %d is Ocupied%n",(count+1));}
+}
+//                         System.out.print(Arrays.toString(parkingLot));
                  
 }
                case 0-> {condition=false;
