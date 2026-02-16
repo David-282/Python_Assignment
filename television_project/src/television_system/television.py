@@ -17,7 +17,6 @@ class TelevisionSystem:
 
     def turn_on_tv(self):
         self.__tv = "TV is On"
-        return self.__tv
 
     def turn_off_tv(self):
         self.__volume = 0
