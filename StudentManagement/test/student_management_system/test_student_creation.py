@@ -1,5 +1,6 @@
 from unittest import TestCase
 
+from src.student_management_system.courses import Course
 from src.student_management_system.student_creation import Student
 
 
@@ -45,3 +46,17 @@ class StudentTest(TestCase):
     def test_that_student_age_cannot_be_negative(self):
         with self.assertRaises(ValueError):
             self._student.set_age(-1)
+
+
+    def test_course_can_be_created_with_the_right_credentials(self):
+
+        self._course = Course("Biology")
+
+        self.assertEqual("Biology",self._course.get_course_title())
+
+
+    def test_that_course_can_not_cannot_be_created_with_wrong_input(self):
+        self._course = Course("Biology")
+
+        with self.assertRaises(ValueError):
+            self._course.set_course_title("  ")
