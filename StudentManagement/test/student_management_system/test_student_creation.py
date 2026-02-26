@@ -52,11 +52,10 @@ class StudentTest(TestCase):
 
         self._course = Course("Biology")
 
-        self.assertEqual("Biology",self._course.get_course_title())
+        self.assertEqual("Biology",self._course.course_title)
 
 
     def test_that_course_can_not_cannot_be_created_with_wrong_input(self):
-        self._course = Course("Biology")
 
         with self.assertRaises(ValueError):
-            self._course.set_course_title("  ")
+            self._course = Course("  ")

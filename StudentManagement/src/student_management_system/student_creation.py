@@ -1,12 +1,12 @@
+from src.student_management_system.courses import Course
 
 
 class Student:
     __no_of_student = 0
-    def __init__(self,name: str,age: int,phone_number: str,gender: str, email:str ):
+    def __init__(self,name: str,age: int,phone_number: str,gender: str, email:str):
 
         self.__email = None
         self.set_email(email)
-
 
         Student.__no_of_student += 1
         self.__student_id = 000 +(self.__no_of_student)

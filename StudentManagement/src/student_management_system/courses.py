@@ -1,17 +1,15 @@
-
 class Course:
     def __init__(self,course_title:str):
-        self.__course_title = None
-        self.set_course_title(course_title)
+        self.course_title = course_title
+        # self.course_unit = course_unit
 
-
-
-
-    def get_course_title(self):
+    @property
+    def course_title(self):
         return self.__course_title
 
-    def set_course_title(self,course_title:str):
+    @course_title.setter
+    def course_title(self,course_title:str):
         if course_title is None or course_title.strip() == "":
             raise ValueError("Course Title cannot be empty")
 
-        self.__course_title = course_title.strip()
+        self.__course_title= course_title.strip()
