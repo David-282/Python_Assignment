@@ -9,7 +9,7 @@ from py_bank import (
 )
 
 
-class TestFunctions(unittest.TestCase):
+class PyBankTest(unittest.TestCase):
 
 #validate email
 
